@@ -1,0 +1,48 @@
+---
+title: 'Docker Images Pusher'
+description: '一个利用 GitHub Actions 转存 Docker 镜像的轻量方案：把 Docker Hub、gcr.io、k8s.io、ghcr.io 等公共镜像同步到阿里云私有仓库，方便国内环境稳定拉取。'
+date: '2026-05-26T00:00:00+08:00'
+draft: false
+showHeroImage: true
+tags:
+  - Docker
+  - GitHub Actions
+  - Aliyun
+  - DevOps
+comments: false
+sidebar:
+  enable: false
+  toc: false
+  relatedPosts: false
+---
+
+Docker Images Pusher 是一个偏运维效率的小工具。它把“手动拉取国外镜像、重新打 tag、再推到国内仓库”这套重复动作收敛成一次 GitHub Actions 工作流，适合给国内服务器准备更稳定的镜像来源。
+
+参考仓库：[poer-pap/docker_image_pusher](https://github.com/poer-pap/docker_image_pusher)
+
+## 这个项目解决什么问题
+
+当部署环境位于国内时，直接从 Docker Hub、`gcr.io`、`k8s.io` 或 `ghcr.io` 拉取镜像，经常会遇到速度慢、失败率高或线路不稳定的问题。这个项目的思路很直接：先通过 GitHub Actions 拉取目标镜像，再把它推送到阿里云个人容器镜像仓库，后续服务器统一从国内私有仓库拉取。
+
+## 核心能力
+
+- 支持把多个公共仓库中的镜像转存到阿里云私有仓库。
+- 通过维护 `images.txt` 批量声明镜像列表，减少重复操作。
+- 支持补充 tag；未指定时默认使用 `latest`。
+- 支持用 `--platform` 指定镜像架构，便于处理非默认平台镜像。
+- 支持较大的镜像体积，适合常见基础设施镜像同步。
+- 可以在工作流中加入定时任务，持续更新基础镜像版本。
+
+## 项目定位
+
+这个项目不是展示型前端作品，而是一个非常明确的工程化工具：输入是待同步的镜像名和仓库凭证，输出是国内网络环境里更可控的镜像分发路径。它的价值在于降低部署链路的不确定性，而不是增加额外界面。
+
+## 使用方式概览
+
+1. Fork 仓库到自己的 GitHub 账号。
+2. 在阿里云容器镜像服务中准备命名空间、仓库地址和访问凭证。
+3. 在 GitHub Actions Secrets 中配置阿里云相关变量。
+4. 在 `images.txt` 中填写需要同步的镜像名、tag 或平台参数。
+5. 触发工作流，把镜像转存到自己的阿里云私有仓库。
+
+这种实现足够朴素，但在“镜像能不能稳定拿到”这个问题上很有效，尤其适合自建服务、Kubernetes 基础镜像同步和国内服务器部署前置准备。

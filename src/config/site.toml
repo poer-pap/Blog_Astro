@@ -1,7 +1,7 @@
 [config.site]
-title = "navfolio"
+title = "Litelog"
 description = "A personal navigation portfolio starter built with Astro."
-pageTitle = "navfolio | Digital Publication Space"
+pageTitle = "Litelog | Digital Publication Space"
 pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
 repository = "https://github.com/dodolalorc/astro-navfolio"
 footerNote = "Released as an open-source starter."
@@ -12,7 +12,7 @@ showTrail = true
 [config.theme]
 # Available palettes:
 # green-soft, green-vivid, rose-soft, pink-soft, purple-soft, blue-soft, orange-soft, brown-soft
-palette = "green-soft"
+palette = "blue-soft"
 
 [config.code]
 lightTheme = "catppuccin-latte"
@@ -65,9 +65,9 @@ pageview = true
 comment = true
 
 [config.profile]
-name = "navfolio"
-handle = "@navfolio"
-role = "A Cat Developer"
+name = "JJLiu Blog"
+handle = "Litelog"
+role = "Developer"
 company = "Independent Studio"
 location = "Remote"
 email = "hello@navfolio.site"
@@ -92,9 +92,6 @@ href = "/projects"
 label = "Vibe"
 href = "/vibe"
 
-[[config.topNav.links]]
-label = "About"
-href = "/about"
 
 [config.home]
 layout = "grid"
@@ -108,15 +105,12 @@ text = [
 image = "/images/logo-with-name.png"
 
 [config.home.intro]
-title = "here is navfolio"
-name = "navfolio"
+title = "here is "
+name = "LiteLog"
 body = [
-  "The name combines \"Navigation\" and \"Portfolio\".",
-  "Navfolio prioritizes lightweight organization, seamless reading, and developer-friendly aesthetics.",
-  "It’s less a resume than a personal OS for your ideas, projects, notes, and online presence.",
-  "这个名字融合了“导航”与“作品集”。",
-  "Navfolio 专注于轻量级组织、流畅的阅读体验，以及对开发者友好的美学设计。",
-  "它不像一份简历，更像是一个属于你自己的个人操作系统——承载想法、项目、笔记与网络足迹。",
+  "This is my personal space for documenting technical learning, project experiments, and tool experiences.",
+  "I organize notes on AI, coding, product thinking, and everyday reflections into a continuously evolving archive.",
+  "It is more than a portfolio — it is my knowledge base, creative lab, and long-term publishing home.",
 ]
 image = "/images/logo-cat.png"
 
@@ -129,22 +123,17 @@ startDate = ""
 dateArchiveBaseHref = ""
 
 [[config.home.navigation]]
-icon = "compass"
-title = "Portfolio"
-subtitle = "Selected work and case studies"
-href = "https://astro.navfolio.site/"
-
-[[config.home.navigation]]
 icon = "pen"
 title = "Blog"
 subtitle = "Essays, notes, and field reports"
 href = "/blog"
 
 [[config.home.navigation]]
-icon = "briefcase"
-title = "Resume"
-subtitle = "Career profile and experience"
-href = "https://github.com/dodolalorc/navfolio"
+icon = "compass"
+title = "Projects"
+subtitle = "Selected work and case studies"
+href = "/projects"
+
 
 [[config.home.navigation]]
 icon = "github"
@@ -178,21 +167,21 @@ href = "mailto:hello@navfolio.site"
 icon = "mail"
 
 [[config.home.doing]]
-text = "Shipping a personal dashboard template"
+text = "Learning AI tools and building practical workflows"
 mark = "01"
 
 [[config.home.doing]]
-text = "Writing reusable notes for future projects"
+text = "Documenting coding experiments and project notes"
 mark = "02"
 
 [[config.home.doing]]
-text = "Improving static-site publishing workflow"
+text = "Improving my personal blog and publishing system"
 mark = "03"
 
 [[config.home.doing]]
-text = "Collecting useful developer resources"
+text = "Collecting useful resources for developers and creators"
 mark = "04"
 
 [[config.home.doing]]
-text = "Exploring small open-source ideas"
+text = "Turning small ideas into visible digital products"
 mark = "05"
