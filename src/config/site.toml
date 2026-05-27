@@ -3,7 +3,7 @@ title = "Litelog"
 description = "A personal navigation portfolio starter built with Astro."
 pageTitle = "Litelog | Digital Publication Space"
 pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
-repository = "https://github.com/dodolalorc/astro-navfolio"
+repository = "https://github.com/poer-pap/Blog_Astro"
 footerNote = "Released as an open-source starter."
 
 [config.vibe]
@@ -72,7 +72,7 @@ company = "Independent Studio"
 location = "Remote"
 email = "hello@navfolio.site"
 website = "https://astro.navfolio.site/"
-github = "https://github.com/dodolalorc/astro-navfolio"
+github = "https://github.com/poer-pap/Blog_Astro"
 meta = "Open-source maintainer"
 avatar = "/images/logo.png"
 
@@ -139,11 +139,11 @@ href = "/projects"
 icon = "github"
 title = "Open Source"
 subtitle = "Code, experiments, and tools"
-href = "https://github.com/dodolalorc/astro-navfolio"
+href = "https://github.com/poer-pap/Blog_Astro"
 
 [[config.home.connect]]
 label = "GitHub"
-href = "https://github.com/dodolalorc/astro-navfolio"
+href = "https://github.com/poer-pap/Blog_Astro"
 icon = "github"
 
 [[config.home.connect]]
