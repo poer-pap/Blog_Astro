@@ -7,7 +7,7 @@ type: photo
 mood: rainy
 location: Tokyo
 images:
-  - ../../assets/figure/blog-sample-picture.png
+  - https://img.litelog.dpdns.org/PicGo/blog-sample-picture.png
 tags: [life]
 align: right
 size: lg
