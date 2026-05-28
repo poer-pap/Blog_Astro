@@ -4,7 +4,9 @@ description: '记录一次为 Astro 博客主题添加 giscus、utterances 和 W
 date: '2026-05-20T00:00:00+08:00'
 draft: false
 heroImage: 'https://img.litelog.dpdns.org/PicGo/comment-hero.png'
-showHeroImage: false
+showHeroImage: true
+categories: ['内容管理']
+series: ['Navfolio 模块手册']
 tags:
   - Astro
   - Navfolio
